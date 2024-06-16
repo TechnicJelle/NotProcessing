@@ -9,3 +9,5 @@ with [SkiaSharp](https://github.com/mono/SkiaSharp) to provide a simple way to d
 
 All the OpenGL is abstracted away in the GPU class,
 so you can focus on drawing stuff in the NotProcessing class.
+
+This should be cross-platform, but I've only tested it on Linux.
