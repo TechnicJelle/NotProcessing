@@ -10,4 +10,7 @@ with [SkiaSharp](https://github.com/mono/SkiaSharp) to provide a simple way to d
 All the OpenGL is abstracted away in the [GPU](NotProcessing/GPU.cs) class,
 so you can focus on drawing stuff in the [NotProcessing](NotProcessing/NotProcessing.cs) class.
 
+This is *not* a library, but rather just a template project. You have to edit the NotProcessing.cs file itself to draw things.  
+You'll probably also want to remove the example drawing stuff from there.
+
 This should be cross-platform, but I've only tested it on Linux.
