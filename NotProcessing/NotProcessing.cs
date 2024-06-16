@@ -39,7 +39,11 @@ public class NotProcessing
 		_window.Load += OnLoad;
 		_window.Update += OnUpdate;
 		_window.Render += OnRender;
-		_window.FramebufferResize += newSize => _gpu.OnFramebufferResize(newSize);
+		_window.FramebufferResize += newSize =>
+		{
+			_gpu.OnFramebufferResize(newSize);
+			OnResize(newSize.X, newSize.Y);
+		};
 		_window.Closing += OnClose;
 	}
 
@@ -77,6 +81,10 @@ public class NotProcessing
 		Canvas.DrawCircle(_random.Next(0, Width), _random.Next(0, Height), 5, _paint);
 
 		_gpu.Render();
+	}
+
+	private void OnResize(int newWidth, int newHeight)
+	{
 	}
 
 	private void OnKeyDown(IKeyboard keyboard, Key key, int keyCode)
