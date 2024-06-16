@@ -233,6 +233,8 @@ void main()
 	public void OnFramebufferResize(Vector2D<int> newSize)
 	{
 		GL.Viewport(newSize);
+		_bitmap.Dispose();
+		_canvas.Dispose();
 		_bitmap = new SKBitmap(newSize.X, newSize.Y);
 		_canvas = new SKCanvas(_bitmap);
 		_canvasDirty = true;
