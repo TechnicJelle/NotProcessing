@@ -7,7 +7,7 @@ This combines [Silk.NET](https://dotnet.github.io/Silk.NET/)'s
 [High-Level Utilities](https://dotnet.github.io/Silk.NET/docs/hlu/)
 with [SkiaSharp](https://github.com/mono/SkiaSharp) to provide a simple way to draw to the screen.
 
-All the OpenGL is abstracted away in the GPU class,
-so you can focus on drawing stuff in the NotProcessing class.
+All the OpenGL is abstracted away in the [GPU](NotProcessing/GPU.cs) class,
+so you can focus on drawing stuff in the [NotProcessing](NotProcessing/NotProcessing.cs) class.
 
 This should be cross-platform, but I've only tested it on Linux.
