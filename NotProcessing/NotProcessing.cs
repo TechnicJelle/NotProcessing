@@ -14,6 +14,7 @@ public class NotProcessing
 	private readonly Random _random = new();
 	private readonly SKFont _font;
 	private readonly SKPaint _paint;
+	private readonly SKBitmap _gear;
 
 	private int Width => _window.Size.X;
 	private int Height => _window.Size.Y;
@@ -35,6 +36,7 @@ public class NotProcessing
 			IsAntialias = true,
 			Style = SKPaintStyle.Fill,
 		};
+		_gear = SKBitmap.Decode("assets/TechnicJelle.png");
 
 		_window.Load += OnLoad;
 		_window.Update += OnUpdate;
@@ -69,6 +71,8 @@ public class NotProcessing
 			// m.Scroll
 			// m.MouseUp
 		}
+
+		Canvas.DrawBitmap(_gear, Width - _gear.Width, Height - _gear.Height);
 	}
 
 	private void OnUpdate(double deltaTime)
@@ -85,6 +89,7 @@ public class NotProcessing
 
 	private void OnResize(int newWidth, int newHeight)
 	{
+		Canvas.DrawBitmap(_gear, newWidth - _gear.Width, newHeight - _gear.Height);
 	}
 
 	private void OnKeyDown(IKeyboard keyboard, Key key, int keyCode)

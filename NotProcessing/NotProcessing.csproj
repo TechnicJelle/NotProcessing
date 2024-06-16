@@ -9,11 +9,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Silk.NET.Input" Version="2.21.0" />
-	  <PackageReference Include="Silk.NET.OpenGL" Version="2.21.0" />
-	  <PackageReference Include="Silk.NET.Windowing" Version="2.21.0" />
-	  <PackageReference Include="SkiaSharp" Version="3.0.0-preview.3.1" />
-	  <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.0.0-preview.3.1" />
+		<PackageReference Include="Silk.NET.Input" Version="2.21.0"/>
+		<PackageReference Include="Silk.NET.OpenGL" Version="2.21.0"/>
+		<PackageReference Include="Silk.NET.Windowing" Version="2.21.0"/>
+		<PackageReference Include="SkiaSharp" Version="3.0.0-preview.3.1"/>
+		<PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.0.0-preview.3.1"/>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Content Include="assets/**">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
 	</ItemGroup>
 
 </Project>
